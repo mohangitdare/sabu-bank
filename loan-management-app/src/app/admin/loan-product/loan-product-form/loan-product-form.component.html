@@ -1,0 +1,46 @@
+<div class="container mt-4">
+  <h2>{{ loanProduct.loanProductId ? 'Edit Loan Product' : 'Add Loan Product' }}</h2>
+  <form (ngSubmit)="saveLoanProduct()">
+    <div class="mb-3">
+      <label class="form-label">Scheme/loan name </label>
+      <input type="text" class="form-control" [(ngModel)]="loanProduct.productName" name="productName" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Loan Type</label>
+      <input type="text" class="form-control" [(ngModel)]="loanProduct.loanType" name="loanType">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Interest Rate</label>
+      <input type="number" class="form-control" [(ngModel)]="loanProduct.interestRate" name="interestRate" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Processing Fee</label>
+      <input type="number" class="form-control" [(ngModel)]="loanProduct.processingFee" name="processingFee">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Min Amount</label>
+      <input type="number" class="form-control" [(ngModel)]="loanProduct.minAmount" name="minAmount" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Max Amount</label>
+      <input type="number" class="form-control" [(ngModel)]="loanProduct.maxAmount" name="maxAmount" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Tenure (months)</label>
+      <input type="number" class="form-control" [(ngModel)]="loanProduct.tenure" name="tenure" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Late Payment Penalty</label>
+      <textarea class="form-control" [(ngModel)]="loanProduct.latePaymentPenalty" name="latePaymentPenalty"></textarea>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Prepayment Options</label>
+      <textarea class="form-control" [(ngModel)]="loanProduct.prepaymentOptions" name="prepaymentOptions"></textarea>
+    </div>
+
+    <div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button class="btn btn-secondary ms-3" (click)="returnback()">Cancel</button>
+    </div>
+  </form>
+</div>

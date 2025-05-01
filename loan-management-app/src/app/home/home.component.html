@@ -1,0 +1,359 @@
+<div class="container-fluid p-0">
+  <section class="hero-section bg-primary text-white py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h1>Welcome to S-Bank</h1>
+          <h2>Empowering Your Financial Journey in Mumbai & Beyond</h2>
+          <p class="lead">
+            Your trusted partner for banking, loans, investments, and digital
+            solutions.
+          </p>
+          <a class="btn btn-lg btn-warning me-3" (click)="gotouserview()"
+            >Apply Now</a
+          >
+          <a routerLink="/products" class="btn btn-lg btn-outline-light"
+            >Explore Products</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Key Offerings</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i
+                class="bi bi-bank2 text-primary mb-2"
+                style="font-size: 2em"
+              ></i>
+              <h5 class="card-title">Accounts</h5>
+              <p class="card-text">
+                Savings, Current, NRI, Fixed & Recurring Deposits.
+              </p>
+              <a routerLink="/accounts" class="btn btn-sm btn-outline-primary"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i
+                class="bi bi-house-door-fill text-success mb-2"
+                style="font-size: 2em"
+              ></i>
+              <h5 class="card-title">Loans</h5>
+              <p class="card-text">
+                Home, Personal, Car, Education, Business & Gold Loans.
+              </p>
+              <a routerLink="/loans" class="btn btn-sm btn-outline-success"
+                >Explore Loan Options</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i
+                class="bi bi-currency-rupee text-warning mb-2"
+                style="font-size: 2em"
+              ></i>
+              <h5 class="card-title">Investments</h5>
+              <p class="card-text">
+                Mutual Funds, Fixed Income, Government Schemes & Insurance.
+              </p>
+              <a
+                routerLink="/investments"
+                class="btn btn-sm btn-outline-warning"
+                >Grow Your Money</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i
+                class="bi bi-credit-card-fill text-info mb-2"
+                style="font-size: 2em"
+              ></i>
+              <h5 class="card-title">Cards</h5>
+              <p class="card-text">
+                Credit Cards with rewards and benefits, Debit Cards for easy
+                access.
+              </p>
+              <a routerLink="/cards" class="btn btn-sm btn-outline-info"
+                >View Card Offers</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i
+                class="bi bi-phone-fill text-danger mb-2"
+                style="font-size: 2em"
+              ></i>
+              <h5 class="card-title">Digital Banking</h5>
+              <p class="card-text">
+                Secure and convenient Internet & Mobile Banking experience.
+              </p>
+              <a
+                routerLink="/digital-banking"
+                class="btn btn-sm btn-outline-danger"
+                >Discover Digital Banking</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <i
+                class="bi bi-globe text-secondary mb-2"
+                style="font-size: 2em"
+              ></i>
+             
+              <h5 class="card-title">NRI Services</h5>
+              <p class="card-text">
+                Specialized accounts, remittances, and investment options for
+                NRIs.
+              </p>
+              <a routerLink="/nri" class="btn btn-sm btn-outline-secondary"
+                >Explore NRI Banking</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Why Choose S-Bank?</h2>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="d-flex align-items-center">
+            <i
+              class="bi bi-shield-check text-primary me-3"
+              style="font-size: 2em"
+            ></i>
+            <div>
+              <h5 class="mb-0">Trust and Security</h5>
+              <p class="text-muted">
+                A legacy of trust with robust security measures.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="d-flex align-items-center">
+            <i
+              class="bi bi-percent text-success me-3"
+              style="font-size: 2em"
+            ></i>
+            <div>
+              <h5 class="mb-0">Competitive Rates</h5>
+              <p class="text-muted">
+                Attractive interest rates on deposits and loans.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="d-flex align-items-center">
+            <i
+              class="bi bi-grid-3x3-gap-fill text-warning me-3"
+              style="font-size: 2em"
+            ></i>
+            <div>
+              <h5 class="mb-0">Wide Range of Products</h5>
+              <p class="text-muted">
+                Meeting all your financial needs under one roof.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="d-flex align-items-center">
+            <i
+              class="bi bi-geo-alt-fill text-info me-3"
+              style="font-size: 2em"
+            ></i>
+            <div>
+              <h5 class="mb-0">Convenient Access</h5>
+              <p class="text-muted">
+                Extensive branch and ATM network in Mumbai & Maharashtra.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="d-flex align-items-center">
+            <i
+              class="bi bi-headset text-danger me-3"
+              style="font-size: 2em"
+            ></i>
+            <div>
+              <h5 class="mb-0">Excellent Customer Service</h5>
+              <p class="text-muted">
+                Dedicated support to assist you with your queries.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="d-flex align-items-center">
+            <i
+              class="bi bi-phone-fill-check text-secondary me-3"
+              style="font-size: 2em"
+            ></i>
+            <div>
+              <h5 class="mb-0">24/7 Digital Banking</h5>
+              <p class="text-muted">Manage your finances anytime, anywhere.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2>Experience the Convenience of Digital Banking</h2>
+          <p class="lead">
+            Bank smarter with our intuitive and secure online and mobile
+            platforms.
+          </p>
+          <ul class="list-unstyled">
+            <li>
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              Real-time fund transfers (NEFT, RTGS, IMPS, UPI)
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill text-success me-2"></i> Easy
+              bill payments and recharges
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill text-success me-2"></i> Access
+              account statements and manage beneficiaries
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill text-success me-2"></i> Apply
+              for services and track requests online
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill text-success me-2"></i> Enhanced
+              security with multi-factor authentication
+            </li>
+          </ul>
+         
+          <div class="mt-3">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary me-2"
+            >
+              <i class="bi bi-google-play me-1"></i> Google Play
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+            >
+              <i class="bi bi-apple me-1"></i> App Store
+            </a>
+          </div>
+       
+        </div>
+        <div class="col">
+            <div style="border-radius: 10px; overflow: hidden; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);">
+              <img src="/assets/bank-image.jfif" style="width: 100%;">
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Latest News & Offers</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">
+                New Savings Account with Higher Interest
+              </h5>
+              <p class="card-text">
+                Announcing our new savings account with a special introductory
+                interest rate...
+              </p>
+              <a href="#" class="btn btn-sm btn-outline-info">Read More</a>
+            </div>
+            <div class="card-footer text-muted">March 20, 2025</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Limited Time Offer on Home Loans</h5>
+              <p class="card-text">
+                Get attractive interest rates and reduced processing fees on
+                home loans this festive season...
+              </p>
+              <a href="#" class="btn btn-sm btn-outline-info">View Offer</a>
+            </div>
+            <div class="card-footer text-muted">March 15, 2025</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">
+                Upcoming Maintenance on Digital Banking
+              </h5>
+              <p class="card-text">
+                Please be informed about a scheduled maintenance window for our
+                internet and mobile banking services...
+              </p>
+              <a href="#" class="btn btn-sm btn-outline-warning">Details</a>
+            </div>
+            <div class="card-footer text-muted">March 25, 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <a routerLink="/news" class="btn btn-outline-primary">View All News</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Find Our Branches & ATMs in Mumbai</h2>
+      <p class="text-center">
+        We have a wide network of branches and ATMs across Mumbai and
+        Maharashtra to serve you.
+      </p>
+      <div class="text-center">
+        <a routerLink="/branch-locator" class="btn btn-primary">Locate Us</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<app-footer></app-footer>

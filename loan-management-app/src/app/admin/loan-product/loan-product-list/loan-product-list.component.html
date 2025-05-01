@@ -1,0 +1,92 @@
+<div class="container mt-4">
+  <h2>Loan Activities</h2>
+  <button class="btn btn-primary mb-3" (click)="openAddLoanModal()">Add New Scheme</button>
+
+  <div class="modal fade" id="addLoanModal" tabindex="-1" aria-labelledby="addLoanModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addLoanModalLabel">Add Loan Product</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeAndResetModal()"></button>
+        </div>
+        <div class="modal-body">
+          <form #loanForm="ngForm" (ngSubmit)="addLoanProduct()">
+            <div class="mb-3">
+              <label class="form-label">Loan/Scheme name </label>
+              <input type="text" class="form-control" [(ngModel)]="newLoanProduct.productName" name="productName" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Loan Type</label>
+              <input type="text" class="form-control" [(ngModel)]="newLoanProduct.loanType" name="loanType">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Interest Rate</label>
+              <input type="number" class="form-control" [(ngModel)]="newLoanProduct.interestRate" name="interestRate" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Processing Fee</label>
+              <input type="number" class="form-control" [(ngModel)]="newLoanProduct.processingFee" name="processingFee">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Min Amount</label>
+              <input type="number" class="form-control" [(ngModel)]="newLoanProduct.minAmount" name="minAmount" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Max Amount</label>
+              <input type="number" class="form-control" [(ngModel)]="newLoanProduct.maxAmount" name="maxAmount" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Tenure (months)</label>
+              <input type="number" class="form-control" [(ngModel)]="newLoanProduct.tenure" name="tenure" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Terms and Conditions</label>
+              <textarea class="form-control" [(ngModel)]="newLoanProduct.termsAndConditions" name="termsAndConditions" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Late Payment Penalty</label>
+              <textarea class="form-control" [(ngModel)]="newLoanProduct.latePaymentPenalty" name="latePaymentPenalty"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Prepayment Options</label>
+              <textarea class="form-control" [(ngModel)]="newLoanProduct.prepaymentOptions" name="prepaymentOptions"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closeAndResetModal()">Close</button>
+              <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Interest Rate</th>
+        <th>Min Amount</th>
+        <th>Max Amount</th>
+        <th>Tenure</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of loanProducts">
+        <td>{{ product.loanProductId }}</td>
+        <td>{{ product.productName }}</td>
+        <td>{{ product.loanType }}</td>
+        <td>{{ product.interestRate }}</td>
+        <td>{{ product.minAmount }}</td>
+        <td>{{ product.maxAmount }}</td>
+        <td>{{ product.tenure }}</td>
+        <td>
+          <button class="btn btn-sm btn-warning" (click)="editLoanProduct(product.loanProductId)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
